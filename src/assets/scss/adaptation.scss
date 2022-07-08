@@ -89,6 +89,10 @@
     }
   }
 
+  .header__opener {
+    display: flex;
+  }
+
   .menu {
     background-color: #131313;
     flex-direction: column;
