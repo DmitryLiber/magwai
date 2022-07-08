@@ -1,0 +1,74 @@
+.slider {
+  position: relative;
+
+  &__img {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    width: 550px;
+    margin-bottom: 110px;
+    position: relative;
+    z-index: 2;
+
+    & p {
+      font-size: 16px;
+      margin: 40px 0 40px 0;
+    }
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  & .splide__slide {
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      display: block;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, #131313 0%, rgba(19, 19, 19, 0) 100%);
+      height: 46%;
+      width: 100%;
+    }
+  }
+
+  & .splide__pagination {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1720px;
+    margin: 0 auto 110px auto;
+    box-sizing: border-box;
+
+    & > li:not(:last-child) button {
+      margin-bottom: 18px;
+    }
+
+    & button {
+      color: #717171;
+      font-size: 14px;
+    }
+
+    & .is-active,
+    button:hover {
+      color: #fff;
+    }
+  }
+}

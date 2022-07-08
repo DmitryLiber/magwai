@@ -1,0 +1,32 @@
+mixin cards()
+  section
+    h2 Карточки
+    .col-5.rake-first.cards
+      -for(let i = 0;i < 5;i++){
+        div
+          .column.cards__item
+            .cards__img(style="background-image:url(./assets/img/card.jpg)")
+            .cards__body
+              h3.cards__title brid
+              p.cards__desc How to increase your productivity with a Music
+              p.cards__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+              .cards__who Posted by <strong>Eugenia</strong>, on July  24, 2019
+            .cards__footer
+              button.btn.btn_black
+                span Continue reading
+        div
+          .column.cards__item
+            .cards__img(style="background-image:url(./assets/img/card2.jpg)")
+            .cards__body
+              h3.cards__title Water
+              p.cards__desc How to increase your productivity with a Music
+              p.cards__text Sed ut perspiciatis unde 
+              .cards__who Posted by <strong>Eugenia</strong>, on July  24, 2019
+            .cards__footer
+              button.btn.btn_black
+                span Continue reading
+      -}
+
+  section.center.load-cards
+    button.btn.btn_ygray
+      span Загрузить ещё

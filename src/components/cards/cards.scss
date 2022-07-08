@@ -1,0 +1,35 @@
+.cards {
+  &__item {
+    background-color: #fff;
+    color: #171717;
+
+    & p,
+    & .cards__who {
+      color: #666666;
+    }
+  }
+
+  &__img {
+    background-size: cover;
+    background-position: center;
+    height: 185px;
+    width: 100%;
+  }
+
+  &__body {
+    padding: 25px 30px;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    padding: 0 30px 25px 30px;
+    & .btn {
+      width: 100%;
+    }
+  }
+}
+
+.load-cards {
+  display: flex;
+  justify-content: center;
+}

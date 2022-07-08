@@ -1,0 +1,258 @@
+$c1: #007bfb;
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('~fonts/Montserrat-Bold.woff') format('woff'),
+    url('~fonts/Montserrat-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('~fonts/Montserrat-Regular.woff') format('woff'),
+    url('~fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulish-Bold';
+  src: url('~fonts/Mulish-Bold.woff') format('woff'),
+    url('~fonts/Mulish-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulish-SemiBold';
+  src: url('~fonts/Mulish-SemiBold.woff') format('woff'),
+    url('~fonts/Mulish-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat-Regular';
+  color: #fff;
+  background-color: #121212;
+  font-size: 14px;
+  overflow-y: scroll;
+  padding-top: 117px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+b,
+strong {
+  font-family: 'Montserrat-Bold';
+  font-weight: 100;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #808080;
+}
+
+p {
+  line-height: 25px;
+  margin: 8px 0 25px 0;
+
+  &:first-child {
+    margin-top: 0px;
+  }
+
+  &:last-child {
+    margin: 8px 0 0px 0;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-family: 'Montserrat-Bold';
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+section {
+  padding-bottom: 70px;
+}
+
+.resetul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+.cross {
+  cursor: pointer;
+  transition: 0.2s;
+  display: grid;
+  place-items: center;
+
+  &:after,
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 33px;
+    height: 2px;
+    background: $c1;
+    border-radius: 10em;
+    transition: 0.2s;
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:hover {
+    &:after,
+    &:before {
+      background: #3e3e3e;
+    }
+  }
+
+  &__white {
+    &:after,
+    &:before {
+      height: 3px;
+      background: #fff;
+    }
+  }
+
+  &_grey {
+    &:after,
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 33px;
+      height: 3px;
+      background: #b8b8b8;
+      border-radius: 10em;
+      transition: 0.2s;
+    }
+  }
+}
+
+.rake {
+  &-first {
+    margin: -15px;
+    & > * {
+      padding: 15px;
+    }
+  }
+  &-second {
+    margin: -25px;
+    & > * {
+      padding: 25px;
+    }
+  }
+}
+
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6 {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    box-sizing: border-box;
+  }
+}
+
+.col-6 > * {
+  width: 16.66%;
+}
+
+.col-5 > * {
+  width: 20%;
+}
+
+.col-4 > * {
+  width: 25%;
+}
+
+.col-3 > * {
+  width: 33.33%;
+}
+
+.col-2 {
+  & > * {
+    width: 50%;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  &_2-1 > * {
+    box-sizing: border-box;
+    &:first-child {
+      width: 66.66%;
+    }
+    &:last-child {
+      width: 33.33%;
+    }
+  }
+}
+
+@mixin stroke($color) {
+  text-shadow: 0px 1px 0 $color, 0px -1px 0 $color, 1px 0px 0 $color,
+    -1px 0px 0 $color, 1px 1px 0 $color, 1px -1px 0 $color, -1px 1px 0 $color,
+    -1px -1px 0 $color;
+}

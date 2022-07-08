@@ -1,0 +1,56 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+  overflow: auto;
+  overscroll-behavior: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+
+  &__closed {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+  }
+
+  &__body {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  &_show {
+    opacity: 1;
+  }
+
+  &__cross {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 21;
+    top: 25px;
+    right: 40px;
+  }
+}
+
+.reset-modal {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 70px;
+}
